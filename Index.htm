@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pauta de Presentación del Proyecto ABP</title>
+    <link rel="stylesheet" href="stylesIndex.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="scriptIndex.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Menú de navegación -->
+        <nav>
+            <button onclick="goToPage3()">Encuesta de Satisfacción y Evaluación del ABP</button>
+            <button onclick="goToPage2()">Rúbricas para Presentación del ABP</button>
+            <button onclick="goToPage1()">Evaluación Grupal</button>
+        </nav>
+
+        <h1>Pauta de Presentación del Proyecto ABP</h1>
+        <h2>Objetivo: Emprender liderazgo y emprendimiento en el sector tecnológico.</h2>
+        
+        <label for="teamName">Nombre del equipo:</label>
+        <input type="text" id="teamName" placeholder="Escribe el nombre del equipo...">
+
+        <label for="students">Estudiantes:</label>
+        <textarea id="students" rows="4" cols="50" placeholder="Escribe los nombres de los estudiantes..."></textarea>
+
+        <div class="score-section">
+            <h3>Evaluación del Equipo.</h3>
+            <label for="score">Puntaje Obtenido:</label>
+            <input type="number" id="score" placeholder="Ingresa el puntaje...">
+            <p>Puntaje Ideal: 40, Nota Máxima: 7.0</p>
+            <p>Puntaje de Aprobación: 23, Nota Mínima: 4.0</p>
+            <h3>Nota del Equipo:</h3>
+        <p id="calculatedGrade">0.00</p>
+        </div>
+
+        <h3>Objetivos:</h3>
+        <ul>
+            <li>Reconocer características individuales de emprendimiento y liderazgo.</li>
+            <li>Mostrar ideas innovadoras a profesores, jueces y pares.</li>
+            <li>Motivar a sus compañeros a tener actitudes positivas.</li>
+            <li>Reconocer el emprendimiento como una alternativa viable.</li>
+            <li>Visualizar casos reales de emprendimientos.</li>
+            <li>Participar como ente motivador.</li>
+        </ul>
+
+        <h3>Actividades Iniciales:</h3>
+        <ol>
+            <li>Formar y organizar equipos de 1 a 6 integrantes (recomendado máximo de 5).</li>
+            <li>Identificarse con video de introducción a elección.</li>
+            <li>Presentar: PPT, Maqueta, Prototipo, Afiche informativo del Producto o Servicio.</li>
+            <li>Presentar escrito del Proyecto (Resumen ejecutivo).</li>
+        </ol>
+
+        <h3>Temas y pautas de investigación grupal Liderazgo y emprendimiento. Se considera como mínimo los siguientes puntos:</h3>
+        <ol>
+            <li>Definición del tema.</li>
+            <li>Relevancia del tema.</li>
+            <li>Importancia empresarial.</li>
+            <li>Trabajo en equipo.</li>
+            <li>Lideres motivacionales.</li>
+        </ol>
+
+        <h3>Estos puntos deben ser la base del trabajo a realizar. Esquema del trabajo:</h3>
+        <ol>
+            <li>Portada, (con logos de las instituciones e información completa de una portada).</li>
+            <li>Producto, (describir y características del producto o servicio a realizar).</li>
+            <li>Esquema del producto o servicio, (dibujos a mano alzada, afiches informativos, planos, Video motivacional, introductorio, fotografías de su desarrollo; incluir en los materiales de apoyo.</li>
+            <li>Principales motivaciones. (personales).</li>
+            <li>Necesidades del mercado. (posibles clientes o público objetivo).</li>
+            <li>Impacto socioeconómico. (Análisis de costos estimados; determinante que es para los usuarios (solo para segundos medios).</li>
+            <li>Análisis FODA. Fortalezas, Oportunidades, Debilidades, Amenazas. Nombre 3 de cada una (solo para segundos medios).</li>
+            <li>Conclusiones del tema.</li>
+            <li>Encuesta de satisfacción.</li>
+        </ol>
+
+        <canvas id="resultChart" width="400" height="200"></canvas>
+
+        <div class="actions">
+            <button onclick="calculateResults()">Calcular Resultados</button>
+            <button onclick="generatePDF()">Generar PDF</button>
+        </div>
+    </div>
+</body>
+</html>
