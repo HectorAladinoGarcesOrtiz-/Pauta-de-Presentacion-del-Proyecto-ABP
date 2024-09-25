@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1 - Evaluación Grupal ABP</title>
+    <link rel="stylesheet" href="stylesPagina1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Pauta de Evaluación Exposición Grupal ABP</h1>
+
+          <!-- Nombre del equipo -->
+          <div class="team-section">
+            <label for="teamName">Nombre del equipo:</label>
+            <input type="text" id="teamName" placeholder="Escribe el nombre del equipo...">
+        </div>
+
+        <label for="students">Estudiantes:</label>
+        <textarea id="students" rows="4" cols="50" placeholder="Escribe los nombres de los estudiantes..."></textarea>
+
+        <table id="evaluationTable">
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Indicadores</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Indicadores con inputs de radio buttons -->
+                <tr>
+                    <td>1</td>
+                    <td>Presentan Formalidad en el vestir (visten con los colores y logos de su marca que representan).</td>
+                    <td><input type="radio" name="indicator1" value="1"></td>
+                    <td><input type="radio" name="indicator1" value="2"></td>
+                    <td><input type="radio" name="indicator1" value="3"></td>
+                    <td><input type="radio" name="indicator1" value="4"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Manifiestan claridad argumentativa en la exposición de hechos o ideas.</td>
+                    <td><input type="radio" name="indicator2" value="1"></td>
+                    <td><input type="radio" name="indicator2" value="2"></td>
+                    <td><input type="radio" name="indicator2" value="3"></td>
+                    <td><input type="radio" name="indicator2" value="4"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Manejan lenguaje técnico pertinente al tema, conceptos, ideas, etc.</td>
+                    <td><input type="radio" name="indicator3" value="1"></td>
+                    <td><input type="radio" name="indicator3" value="2"></td>
+                    <td><input type="radio" name="indicator3" value="3"></td>
+                    <td><input type="radio" name="indicator3" value="4"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Manifiestan manejo de conceptos importantes para la comprensión del tema.</td>
+                    <td><input type="radio" name="indicator4" value="1"></td>
+                    <td><input type="radio" name="indicator4" value="2"></td>
+                    <td><input type="radio" name="indicator4" value="3"></td>
+                    <td><input type="radio" name="indicator4" value="4"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Dirigen mirada y exposición hacia sus compañeros.</td>
+                    <td><input type="radio" name="indicator5" value="1"></td>
+                    <td><input type="radio" name="indicator5" value="2"></td>
+                    <td><input type="radio" name="indicator5" value="3"></td>
+                    <td><input type="radio" name="indicator5" value="4"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Presentan material de apoyo terminado y acorde con la temática.</td>
+                    <td><input type="radio" name="indicator6" value="1"></td>
+                    <td><input type="radio" name="indicator6" value="2"></td>
+                    <td><input type="radio" name="indicator6" value="3"></td>
+                    <td><input type="radio" name="indicator6" value="4"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Utilizan material de apoyo para la fundamentación o explicación del tema.</td>
+                    <td><input type="radio" name="indicator7" value="1"></td>
+                    <td><input type="radio" name="indicator7" value="2"></td>
+                    <td><input type="radio" name="indicator7" value="3"></td>
+                    <td><input type="radio" name="indicator7" value="4"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Demuestran seguridad y dominio del tema durante la exposición.</td>
+                    <td><input type="radio" name="indicator8" value="1"></td>
+                    <td><input type="radio" name="indicator8" value="2"></td>
+                    <td><input type="radio" name="indicator8" value="3"></td>
+                    <td><input type="radio" name="indicator8" value="4"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Responden en forma segura y acertada preguntas relacionadas con el tema.</td>
+                    <td><input type="radio" name="indicator9" value="1"></td>
+                    <td><input type="radio" name="indicator9" value="2"></td>
+                    <td><input type="radio" name="indicator9" value="3"></td>
+                    <td><input type="radio" name="indicator9" value="4"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Utilizan adecuadamente su voz para ser escuchados.</td>
+                    <td><input type="radio" name="indicator10" value="1"></td>
+                    <td><input type="radio" name="indicator10" value="2"></td>
+                    <td><input type="radio" name="indicator10" value="3"></td>
+                    <td><input type="radio" name="indicator10" value="4"></td>
+                </tr>
+                <!-- Añadir más indicadores según sea necesario -->
+            </tbody>
+        </table>
+
+        <div class="totals">
+            <h3>Puntos Totales del equipo:</h3>
+            <p id="totalPoints">0</p>
+        </div>
+
+        <!-- Gráficos para visualización de los puntajes -->
+        <canvas id="indicatorsChart" width="400" height="200"></canvas>
+        <canvas id="totalChart" width="400" height="200"></canvas>
+
+        <div class="actions">
+            <button onclick="calculateTotal()">Calcular Puntos</button>
+            <button onclick="generatePDF()">Generar PDF</button>
+            <button onclick="goBack()">Volver</button>
+        </div>
+
+        <div class="observations-section">
+            <label for="observations">Observaciones:</label>
+            <textarea id="observations" rows="4" cols="50" placeholder="Escribe tus observaciones..."></textarea>
+        </div>
+    </div>
+
+    <script src="scriptPagina1.js"></script>
+</body>
+</html>
