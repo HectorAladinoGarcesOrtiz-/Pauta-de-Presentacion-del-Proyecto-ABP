@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 2 - Rúbricas ABP</title>
+    <link rel="stylesheet" href="stylesPagina2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Rúbricas para Presentación del ABP</h1>
+
+          <!-- Nombre del equipo -->
+        <div class="team-section">
+            <label for="teamName">Nombre del equipo:</label>
+            <input type="text" id="teamName" placeholder="Escribe el nombre del equipo...">
+        </div>
+
+        <table id="rubricsTable">
+            <thead>
+                <tr>
+                    <th>Calidad de la comunicación verbal (individual) A</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>4: Habla claramente, su expresión oral es buena. Sin presentar muestras de titubeos y muletillas.</td></tr>
+                <tr><td>3: Habla claramente, su expresión oral muestra titubeos, pausas , repeticiones de palabras y con muy poca frecuencia usa muletilla.</td></tr>
+                <tr><td>2: Habla claramente, su expresión oral muestra titubeos pausas y repeticiones de palabras.</td></tr>
+                <tr><td>1: Su habla es incoherente, lee directamente sus apuntes, expresión oral es inexacta y usa muletillas que producen la distracción del auditorio.</td></tr>
+                <tr><td>0: Se queda trabado en silencio sin comunicar en un lapso de tiempo y su habla es incoherente, lee directamente sus apuntes, expresión oral es inexacta y usa muletillas</td></tr>
+            </tbody>
+            <thead></thead>
+                <tr>
+                    <th>Uso de material de apoyo (grupal) B</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>4: Presentan materiales bien elaborados y adecuados, haciendo referencias adecuadas a este.</td></tr>
+                <tr><td>3: Presentan material adecuado, pero hacen sólo algunas referencias a este.</td></tr>
+                <tr><td>2: Presenta algún material inadecuado al tema. Hace pocas referencias a este.</td></tr>
+                <tr><td>1: Presenta material inadecuado al tema. Hace pocas referencias a este.</td></tr>
+                <tr><td>0: Se presentan sin material de apoyo.</td></tr>
+            </tbody>
+            <thead></thead>
+                <tr>
+                    <th>Estructura del trabajo pilares o fases (grupal) C</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>4: Presenta correctamente el inicio, la introducción, el cuerpo y el cierre del trabajo.</td></tr>
+                <tr><td>3: Presentan la mayoría de los componentes (85%) de la estructura, presentación oral.</td></tr>
+                <tr><td>2: Presentan la mayoría de los componentes (65%) de la estructura, presentación oral.</td></tr>
+                <tr><td>1: Presenta la mitad de los componentes de la estructura de presentación oral.</td></tr>
+                <tr><td>0: Sin presentar los elementos básicos de la estructura de la presentación oral.</td></tr>
+            </tbody>
+            <thead></thead>
+                <tr>
+                    <th>Contenidos  de  la presentación  (grupal) D</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>4: Sintetizan adecuadamente los contenidos, con una buena secuencia de ello. Responden correctamente las preguntas.</td></tr>
+                <tr><td>3: Presentan una síntesis completa del trabajo, pero con una secuencia inadecuada. Responde algunas  preguntas.</td></tr>
+                <tr><td>2: Presentan una síntesis incompleta del trabajo, pero con una secuencia inadecuada. Responde algunas  preguntas.</td></tr>
+                <tr><td>1: Narran el proyecto en forma desordenada, sin sintetizar. Responde algunas preguntas.</td></tr>
+                <tr><td>0: Narran el proyecto en forma desordenada, sin sintetizar. Sin responder preguntas.</td></tr>
+            </tbody>
+            <thead></thead>
+                <tr>
+                    <th>Uso del tiempo asignado (individual) E</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>4: Aprovechan el tiempo asignado en forma optima, completando su presentación a tiempo.</td></tr>
+                <tr><td>3: Se ajustan al tiempo asignado, pero sin aprovechar bien los tiempos.</td></tr>
+                <tr><td>2: Se ajustan al tiempo asignado, pero sin aprovechar bien los tiempos cortando su Presentación.</td></tr>
+                <tr><td>1: Se ajustan al tiempo asignado, pero sin terminar su presentación.</td></tr>
+                <tr><td>0: Exceden el tiempo o le resulta insuficiente.</td></tr>
+            </tbody>
+
+            <!-- Similar estructura para las otras rúbricas, siguiendo el mismo formato -->
+            <thead>
+                <tr>
+                    <th>Uso del lenguaje Técnico (individual) F</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>4: Emplea correctamente una amplia variedad del lenguaje técnico, presenta información detallada, compleja, apropiada, y comunica aun las ideas mas difíciles usando un lenguaje técnico eficiente.</td></tr>
+                <tr><td>3: Reconocen y emplean una variedad razonable de vocabulario técnico para presentar la mayor parte de la información en una forma apropiada, y comunican la mayoría de sus  ideas usando un lenguaje técnico eficiente.</td></tr>
+                <tr><td>2: Reconocen y emplean una variedad medianamente razonable de vocabulario técnico para presentar la mayor parte de la información en una forma apropiada, y comunican la mayoría de sus  ideas usando un lenguaje técnico eficiente.</td></tr>
+                <tr><td>1: Reconocen y vocabulario técnico básico, muestran cierta capacidad de presentar información en forma apropiada, comunican algunas de sus ideas usando cierto lenguaje técnico eficiente.</td></tr>
+                <tr><td>0: Sin utilizar en forma aplicada el lenguaje técnico, presentando la información desordenada.</td></tr>
+            </tbody>
+            
+            <!-- Similar estructura para C, D, E, F -->
+        </table>
+
+        <h2>Evaluación por equipo e individual</h2>
+        <table id="evaluationTable">
+            <thead>
+                <tr>
+                    <th>NUMERO</th>
+                    <th>Integrantes</th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                    <th>F</th>
+                    <th>PUNTACION</th>
+                    <th>Nota Personal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas para cada integrante, incluyendo inputs para las evaluaciones individuales y grupales -->
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" name="teamMember1" placeholder="Integrante 1"></td>
+                    <td><input type="number" name="A1" placeholder="0"></td>
+                    <td><input type="number" name="B1" placeholder="0"></td>
+                    <td><input type="number" name="C1" placeholder="0"></td>
+                    <td><input type="number" name="D1" placeholder="0"></td>
+                    <td><input type="number" name="E1" placeholder="0"></td>
+                    <td><input type="number" name="F1" placeholder="0"></td>
+                    <td id="total1">0</td>
+                    <td id="grade1">0</td>
+                </tr>
+                <!-- Agregar más filas según sea necesario (para cada integrante) -->
+                <tr>
+                    <td>2</td>
+                    <td><input type="text" name="teamMember2" placeholder="Integrante 2"></td>
+                    <td><input type="number" name="A2" placeholder="0"></td>
+                    <td><input type="number" name="B2" placeholder="0"></td>
+                    <td><input type="number" name="C2" placeholder="0"></td>
+                    <td><input type="number" name="D2" placeholder="0"></td>
+                    <td><input type="number" name="E2" placeholder="0"></td>
+                    <td><input type="number" name="F2" placeholder="0"></td>
+                    <td id="total2">0</td>
+                    <td id="grade2">0</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td><input type="text" name="teamMember3" placeholder="Integrante 3"></td>
+                    <td><input type="number" name="A3" placeholder="0"></td>
+                    <td><input type="number" name="B3" placeholder="0"></td>
+                    <td><input type="number" name="C3" placeholder="0"></td>
+                    <td><input type="number" name="D3" placeholder="0"></td>
+                    <td><input type="number" name="E3" placeholder="0"></td>
+                    <td><input type="number" name="F3" placeholder="0"></td>
+                    <td id="total3">0</td>
+                    <td id="grade3">0</td>
+                </tr>
+
+
+                <tr>
+                    <td>4</td>
+                    <td><input type="text" name="teamMember4" placeholder="Integrante 4"></td>
+                    <td><input type="number" name="A4" placeholder="0"></td>
+                    <td><input type="number" name="B4" placeholder="0"></td>
+                    <td><input type="number" name="C4" placeholder="0"></td>
+                    <td><input type="number" name="D4" placeholder="0"></td>
+                    <td><input type="number" name="E4" placeholder="0"></td>
+                    <td><input type="number" name="F4" placeholder="0"></td>
+                    <td id="total4">0</td>
+                    <td id="grade4">0</td>
+                </tr>
+
+
+                <tr>
+                    <td>5</td>
+                    <td><input type="text" name="teamMember5" placeholder="Integrante 5"></td>
+                    <td><input type="number" name="A5" placeholder="0"></td>
+                    <td><input type="number" name="B5" placeholder="0"></td>
+                    <td><input type="number" name="C5" placeholder="0"></td>
+                    <td><input type="number" name="D5" placeholder="0"></td>
+                    <td><input type="number" name="E5" placeholder="0"></td>
+                    <td><input type="number" name="F5" placeholder="0"></td>
+                    <td id="total5">0</td>
+                    <td id="grade5">0</td>
+                </tr>
+
+
+                </tr>
+                    <td>6</td>
+                    <td><input type="text" name="teamMember6" placeholder="Integrante 6"></td>
+                    <td><input type="number" name="A6" placeholder="0"></td>
+                    <td><input type="number" name="B6" placeholder="0"></td>
+                    <td><input type="number" name="C6" placeholder="0"></td>
+                    <td><input type="number" name="D6" placeholder="0"></td>
+                    <td><input type="number" name="E6" placeholder="0"></td>
+                    <td><input type="number" name="F6" placeholder="0"></td>
+                    <td id="total6">0</td>
+                    <td id="grade6">0</td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+        <h3>Puntos Ideales y Aprobaciones</h3>
+        <p>Puntos Ideales Individual: 24 PT (Nota: 7.0)</p>
+        <p>Puntos Aprobación Individual: 14 PT (Nota: 4.0)</p>
+
+        <!-- Gráficos de cada integrante -->
+        <div id="chartsContainer"></div>
+
+        <!-- Botones -->
+        <div class="actions">
+            <button onclick="calculateScores()">Calcular Puntajes</button>
+            <button onclick="generatePDF()">Generar PDF</button>
+            <button onclick="goBack()">Volver</button>
+        </div>
+    </div>
+
+    <script src="scriptPagina2.js"></script>
+</body>
+</html>
