@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción y Evaluación del ABP</title>
+    <link rel="stylesheet" href="stylesPagina3.css">
+    <script src="scriptPagina3.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta de Satisfacción y Evaluación del ABP</h1>
+        
+        <p>Por favor, selecciona uno de los formatos de encuesta para evaluar los equipos del ABP.</p>
+
+        <!-- Sección para Google Forms -->
+        <div class="survey-section">
+            <h2>Encuesta en Google Forms</h2>
+            <a href="https://forms.gle/vVZv4si73mGZrV7h8" target="_blank" class="survey-link">Ir a la Encuesta de Google Forms</a>
+            <canvas id="qrGoogleForms"></canvas>
+            <button onclick="downloadQR('qrGoogleForms', 'GoogleFormsQR.pdf')">Descargar QR Google Forms en PDF</button>
+        </div>
+
+        <!-- Sección para SurveyMonkey -->
+        <div class="survey-section">
+            <h2>Encuesta en SurveyMonkey</h2>
+            <a href="https://es.surveymonkey.com/r/FJTGW9Y" target="_blank" class="survey-link">Ir a la Encuesta de SurveyMonkey</a>
+            <canvas id="qrSurveyMonkey"></canvas>
+            <button onclick="downloadQR('qrSurveyMonkey', 'SurveyMonkeyQR.pdf')">Descargar QR SurveyMonkey en PDF</button>
+        </div>
+
+        <button onclick="goBack()" class="back-button">Volver</button>
+    </div>
+</body>
+</html>
